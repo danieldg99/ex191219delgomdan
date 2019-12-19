@@ -1,0 +1,97 @@
+@import 'parcial1delgomdan';
+body {
+    counter-reset: delgomdanh1;
+    margin: 0;
+}
+
+%centradoFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delgomdan {
+    &_ej2_3 {
+        padding-left: 2em;
+        & h1 {
+            counter-reset: delgomdanh2;
+            &::before {
+                counter-increment: delgomdanh1;
+                content: 'Suscripción 'counter(delgomdanh1) '. ';
+            }
+        }
+        & h2 {
+            counter-reset: delgomdanh3;
+            &::before {
+                counter-increment: delgomdanh2;
+                content: counter(delgomdanh1) '.'counter(delgomdanh2)' ';
+            }
+        }
+        & h3 {
+            &::before {
+                color: lightblue;
+                counter-increment: delgomdanh3;
+                content: counter(delgomdanh1) '.' counter(delgomdanh2) '.'counter(delgomdanh3)' ';
+            }
+        }
+    }
+    &_ej2_4 {
+        background-color: lightblue;
+        height: 300px;
+        @extend %centradoFlex;
+        justify-content: space-around;
+        padding: 10px 0;
+        & .contenedor {
+            display: flex;
+            box-sizing: border-box;
+            width: (97%/2);
+            height: 100%;
+            background-color: lightgray;
+            border: 1px solid black;
+            padding: 5px;
+            & .elemento {
+                box-sizing: border-box;
+                @extend %centradoFlex;
+                border: 1px solid lightcoral;
+                width: (100%/3);
+                height: 100%;
+            }
+        }
+    }
+    &_ej2_6 {
+        background-color: royalblue;
+        padding: 10px 5px;
+        @extend %centradoFlex;
+        justify-content: flex-end;
+        & a {
+            margin-right: .5em;
+            background-color: aliceblue;
+            padding: 20px;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:visited {
+                color: black;
+            }
+            &:hover {
+                background-color: lightgray;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .delgomdan {
+        &_ej2_6 {
+            flex-direction: column;
+            & a {
+                margin-top: .2em;
+                margin-right: 0;
+                width: 100%;
+            }
+        }
+    }
+}

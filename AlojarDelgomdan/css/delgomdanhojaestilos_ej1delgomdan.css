@@ -1,0 +1,99 @@
+@charset "UTF-8";
+.claseparcialdelgomdan {
+  margin: 2em 0.5em 0;
+  box-sizing: border-box;
+  border: 2px dotted black;
+}
+.claseparcialdelgomdan:last-child {
+  margin-bottom: 2em;
+}
+
+body {
+  counter-reset: delgomdanh1;
+  margin: 0;
+}
+
+.delgomdan_ej2_6, .delgomdan_ej2_4 .contenedor .elemento, .delgomdan_ej2_4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delgomdan_ej2_3 {
+  padding-left: 2em;
+}
+.delgomdan_ej2_3 h1 {
+  counter-reset: delgomdanh2;
+}
+.delgomdan_ej2_3 h1::before {
+  counter-increment: delgomdanh1;
+  content: "Suscripción " counter(delgomdanh1) ". ";
+}
+.delgomdan_ej2_3 h2 {
+  counter-reset: delgomdanh3;
+}
+.delgomdan_ej2_3 h2::before {
+  counter-increment: delgomdanh2;
+  content: counter(delgomdanh1) "." counter(delgomdanh2) " ";
+}
+.delgomdan_ej2_3 h3::before {
+  color: lightblue;
+  counter-increment: delgomdanh3;
+  content: counter(delgomdanh1) "." counter(delgomdanh2) "." counter(delgomdanh3) " ";
+}
+.delgomdan_ej2_4 {
+  background-color: lightblue;
+  height: 300px;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+.delgomdan_ej2_4 .contenedor {
+  display: flex;
+  box-sizing: border-box;
+  width: 48.5%;
+  height: 100%;
+  background-color: lightgray;
+  border: 1px solid black;
+  padding: 5px;
+}
+.delgomdan_ej2_4 .contenedor .elemento {
+  box-sizing: border-box;
+  border: 1px solid lightcoral;
+  width: 33.3333333333%;
+  height: 100%;
+}
+.delgomdan_ej2_6 {
+  background-color: royalblue;
+  padding: 10px 5px;
+  justify-content: flex-end;
+}
+.delgomdan_ej2_6 a {
+  margin-right: 0.5em;
+  background-color: aliceblue;
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+.delgomdan_ej2_6 a:last-child {
+  margin-right: 0;
+}
+.delgomdan_ej2_6 a:visited {
+  color: black;
+}
+.delgomdan_ej2_6 a:hover {
+  background-color: lightgray;
+}
+
+@media screen and (max-width: 450px) {
+  .delgomdan_ej2_6 {
+    flex-direction: column;
+  }
+  .delgomdan_ej2_6 a {
+    margin-top: 0.2em;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=delgomdanhojaestilos_ej1delgomdan.css.map */
