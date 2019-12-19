@@ -1,0 +1,51 @@
+@mixin btn--color($color) {
+    border-color: $color;
+    color: white;
+    background-color: $color;
+}
+
+body {
+    font-family: "fira-sans-2", sans-serif;
+    background-color: #ccc;
+}
+
+$weight: 600;
+.btn {
+    text-decoration: none;
+    background-color: white;
+    color: #888;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px;
+    font: 18px $weight;
+    text-transform: uppercase;
+    padding: 10px 5px;
+    &__price {
+        color: #fff;
+        padding: 0 12px;
+        margin-right: -10px;
+        /* realign button text padding */
+        font-weight: $weight;
+        background-color: #333;
+        opacity: .4;
+        border-radius: 5px 0 0 5px;
+    }
+    &__text {
+        padding: 0 10px;
+        border-radius: 0 5px 5px 0;
+    }
+    &--big {
+        font-size: 28px;
+        padding: 10px;
+        font-weight: 400;
+    }
+    &--blue {
+        @include btn--color(#0074D9);
+    }
+    &--orange {
+        @include btn--color(#FF4136);
+    }
+    &--green {
+        @include btn--color(#3D9970);
+    }
+}

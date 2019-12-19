@@ -1,0 +1,52 @@
+body {
+  font-family: "fira-sans-2", sans-serif;
+  background-color: #ccc;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: white;
+  color: #888;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px;
+  font: 18px 600;
+  text-transform: uppercase;
+  padding: 10px 5px;
+}
+.btn__price {
+  color: #fff;
+  padding: 0 12px;
+  margin-right: -10px;
+  /* realign button text padding */
+  font-weight: 600;
+  background-color: #333;
+  opacity: 0.4;
+  border-radius: 5px 0 0 5px;
+}
+.btn__text {
+  padding: 0 10px;
+  border-radius: 0 5px 5px 0;
+}
+.btn--big {
+  font-size: 28px;
+  padding: 10px;
+  font-weight: 400;
+}
+.btn--blue {
+  border-color: #0074D9;
+  color: white;
+  background-color: #0074D9;
+}
+.btn--orange {
+  border-color: #FF4136;
+  color: white;
+  background-color: #FF4136;
+}
+.btn--green {
+  border-color: #3D9970;
+  color: white;
+  background-color: #3D9970;
+}
+
+/*# sourceMappingURL=delgomdansassej3.css.map */
