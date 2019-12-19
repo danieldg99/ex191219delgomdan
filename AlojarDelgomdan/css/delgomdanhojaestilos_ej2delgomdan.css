@@ -1,0 +1,32 @@
+.delgomdan_h1 {
+  text-align: center;
+}
+.delgomdan_ej3_3 {
+  margin: 2em 0.5em 0;
+  padding: 6px;
+}
+.delgomdan_ej3_3 .elemento1 {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding: 8px;
+  border: 2px blue solid;
+  text-align: left;
+}
+.delgomdan_ej3_3 .elemento2 {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding: 8px;
+  border: 5px red dotted;
+  text-align: left;
+}
+
+@media screen and (max-width: 500px) {
+  .delgomdan_ej3_3 .elemento1, .delgomdan_ej3_3 .elemento2 {
+    margin-top: 0.5em;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=delgomdanhojaestilos_ej2delgomdan.css.map */
